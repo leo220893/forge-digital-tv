@@ -1,0 +1,55 @@
+name: Build StreamLink Monitor APK
+
+on:
+  push:
+    branches:
+      - streamlink-monitor-apk
+    paths:
+      - 'streamlink-monitor/**'
+      - '.github/workflows/build-streamlink-monitor.yml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install Android SDK packages
+        run: |
+          yes | sdkmanager --licenses >/dev/null || true
+          sdkmanager "platforms;android-35" "build-tools;35.0.0"
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.7'
+
+      - name: Build APK and reporter AAR
+        working-directory: streamlink-monitor
+        run: gradle :app:assembleDebug :reporter:assembleRelease --stacktrace
+
+      - name: Prepare outputs
+        run: |
+          mkdir -p out
+          cp streamlink-monitor/app/build/outputs/apk/debug/app-debug.apk out/StreamLinkMonitor.apk
+          cp streamlink-monitor/reporter/build/outputs/aar/reporter-release.aar out/StreamLinkReporter.aar
+          cp streamlink-monitor/INTEGRATION.md out/INTEGRATION.md
+
+      - name: Upload build
+        uses: actions/upload-artifact@v4
+        with:
+          name: StreamLinkMonitor-build
+          path: out/
+          if-no-files-found: error
+          retention-days: 7
