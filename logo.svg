@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 360" role="img" aria-labelledby="title desc">
+  <title id="title">Forge Digital</title>
+  <desc id="desc">Logo de Forge Digital con un yunque tecnológico dorado y blanco.</desc>
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f4d97e"/>
+      <stop offset="45%" stop-color="#c4a65a"/>
+      <stop offset="100%" stop-color="#8f6e2c"/>
+    </linearGradient>
+    <linearGradient id="steel" x1="0" y1="0" x2="0.9" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="55%" stop-color="#f8f1df"/>
+      <stop offset="100%" stop-color="#c4a65a"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g transform="translate(22 18)" fill="none" stroke="url(#gold)" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke-width="8" opacity=".95">
+      <path d="M159 78V19m0 0c0-13 20-13 20 0s-20 13-20 0m35 69V35m0 0c0-13 20-13 20 0s-20 13-20 0"/>
+      <path d="M124 106V62m0 0c0-10 16-10 16 0s-16 10-16 0m105 56V73m0 0c0-10 16-10 16 0s-16 10-16 0"/>
+      <path d="M67 162H22m0 0c-10 0-10-16 0-16s10 16 0 16m27 21H9m0 0c-10 0-10 16 0 16s10-16 0-16"/>
+      <path d="M280 158h43m0 0c10 0 10-16 0-16s-10 16 0 16m-33 28h48m0 0c10 0 10 16 0 16s-10-16 0-16"/>
+      <path d="M81 111l38 30m-38-30-24-25m172 26-30 28m30-28 25-25"/>
+    </g>
+    <g fill="url(#gold)" stroke="none" opacity=".92">
+      <rect x="54" y="72" width="15" height="15" rx="2"/><rect x="78" y="52" width="13" height="13" rx="2"/>
+      <rect x="43" y="97" width="12" height="12" rx="2"/><rect x="69" y="105" width="14" height="14" rx="2"/>
+      <rect x="262" y="73" width="15" height="15" rx="2"/><rect x="281" y="94" width="13" height="13" rx="2"/>
+      <rect x="248" y="111" width="12" height="12" rx="2"/><rect x="275" y="120" width="14" height="14" rx="2"/>
+    </g>
+    <g stroke-width="12" filter="url(#glow)">
+      <path d="M48 210h78l38-28h105l27 28h50l-31 24H78z" fill="url(#steel)"/>
+      <path d="M96 235h196l-25 31h-50v35c0 13 12 20 22 27H146c10-7 22-14 22-27v-35h-49z" fill="url(#gold)"/>
+      <path d="M143 328v-19h102v19"/>
+      <path d="M174 180l84-83 29 29-84 83z" fill="url(#steel)"/>
+      <path d="M241 84l24-24 43 43-24 24z" fill="url(#gold)"/>
+      <path d="M195 214l-27-27 30-30 27 27z" fill="url(#gold)"/>
+    </g>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" letter-spacing="6">
+    <text x="390" y="172" fill="#ffffff" font-size="118" font-weight="800">FORGE</text>
+    <text x="398" y="258" fill="url(#gold)" font-size="52" font-weight="700">DIGITAL</text>
+  </g>
+</svg>
