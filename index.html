@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a0a0a">
+<meta name="description" content="FORGE DIGITAL TV — reproductor de canales propio, optimizado para Smart TV, móvil y escritorio.">
+<title>FORGE DIGITAL TV</title>
+<link rel="icon" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+<link rel="stylesheet" href="styles.css">
+<script>
+/* Logo de reserva: definido antes de pintar para que el onerror de <img> siempre lo encuentre.
+   Si colocás tu logo.png en la raíz, este SVG nunca se usa. */
+window.__forgeFallbackLogo = function () {
+  var wrap = document.createElement('div');
+  wrap.innerHTML =
+    '<svg viewBox="0 0 120 120" class="brand__logo" role="img" aria-label="FORGE DIGITAL">' +
+      '<defs><linearGradient id="fgGold" x1="0" y1="0" x2="1" y2="1">' +
+        '<stop offset="0" stop-color="#f7e7a6"/><stop offset=".5" stop-color="#d4af37"/><stop offset="1" stop-color="#a67c1a"/>' +
+      '</linearGradient></defs>' +
+      '<path fill="url(#fgGold)" d="M16 60h56c9 0 15 6 16 13H86c-2 8-9 13-16 13H54v10h20v8H34v-8h12V86H32c-9 0-16-7-16-16v-10z"/>' +
+      '<path fill="url(#fgGold)" d="M70 16l30 10-8 22-24-16z"/>' +
+      '<circle cx="24" cy="30" r="3.2" fill="url(#fgGold)"/><circle cx="42" cy="18" r="2.4" fill="url(#fgGold)"/>' +
+      '<rect x="12" y="40" width="6" height="6" fill="url(#fgGold)"/><rect x="50" y="28" width="5" height="5" fill="url(#fgGold)"/>' +
+      '<rect x="30" y="12" width="4" height="4" fill="url(#fgGold)"/>' +
+    '</svg>';
+  return wrap.firstElementChild;
+};
+</script>
+</head>
+<body data-view="grid">
+
+<!-- ====================== SPLASH ====================== -->
+<div id="splash" class="splash">
+  <div class="splash__inner">
+    <img src="logo.png" alt="FORGE DIGITAL" class="splash__logo" onerror="this.replaceWith(window.__forgeFallbackLogo())">
+    <div class="splash__bar"><span></span></div>
+  </div>
+</div>
+
+<!-- ====================== BROWSE ====================== -->
+<div id="browse" class="browse">
+
+  <header class="topbar">
+    <div class="brand">
+      <img src="logo.png" alt="" class="brand__logo" onerror="this.replaceWith(window.__forgeFallbackLogo())">
+      <div class="brand__text">
+        <strong>FORGE</strong>
+        <span>DIGITAL TV</span>
+      </div>
+    </div>
+
+    <div class="search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 104.24 10.24l4.26 4.26 1.42-1.42-4.26-4.26A6 6 0 0010 4zm0 2a4 4 0 110 8 4 4 0 010-8z"/></svg>
+      <input id="search-input" type="search" placeholder="Buscar canal…" autocomplete="off" spellcheck="false" data-focusable data-zone="search">
+      <kbd>/</kbd>
+    </div>
+
+    <div class="topbar__right">
+      <span id="status-pill" class="pill pill--ok">Catálogo listo</span>
+      <span id="clock" class="clock">--:--</span>
+    </div>
+  </header>
+
+  <main class="layout">
+    <nav id="rail" class="rail" aria-label="Categorías"></nav>
+
+    <section class="content">
+      <div class="content__head">
+        <h1 id="cat-title">Canales</h1>
+        <p id="cat-count" class="muted"></p>
+      </div>
+      <div id="grid" class="grid" role="list"></div>
+      <div id="empty" class="empty" hidden>
+        <p class="empty__title">Sin resultados</p>
+        <p class="muted">Probá con otro nombre o cambiá de categoría.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="helpbar">
+    <span><kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd> Navegar</span>
+    <span><kbd>OK</kbd> Reproducir</span>
+    <span><kbd>F</kbd> Favorito</span>
+    <span><kbd>/</kbd> Buscar</span>
+    <span><kbd>Back</kbd> Volver</span>
+  </footer>
+</div>
+
+<!-- ====================== PLAYER ====================== -->
+<div id="player" class="player" hidden>
+  <video id="video" playsinline webkit-playsinline preload="none"></video>
+
+  <div id="player-spinner" class="spinner" hidden><span></span></div>
+
+  <div id="player-error" class="perror" hidden>
+    <p class="perror__title">No se pudo reproducir la señal</p>
+    <p id="player-error-msg" class="muted"></p>
+    <div class="perror__actions">
+      <button id="btn-retry" class="btn btn--gold" data-focusable data-zone="error">Reintentar</button>
+      <button id="btn-back-error" class="btn" data-focusable data-zone="error">Volver al catálogo</button>
+    </div>
+  </div>
+
+  <div id="osd" class="osd">
+    <div class="osd__top">
+      <div class="osd__badge" id="osd-number">01</div>
+      <div class="osd__meta">
+        <h2 id="osd-name">—</h2>
+        <p id="osd-desc" class="muted"></p>
+      </div>
+      <div class="osd__tags">
+        <span id="osd-type" class="tag">—</span>
+        <span id="osd-live" class="tag tag--live" hidden>EN VIVO</span>
+      </div>
+    </div>
+
+    <div class="osd__bottom">
+      <div class="osd__controls">
+        <button id="btn-playpause" class="ctl" title="Reproducir/Pausar" data-focusable data-zone="osd">
+          <svg viewBox="0 0 24 24"><path id="icon-playpause" d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+        </button>
+        <button id="btn-mute" class="ctl" title="Silenciar" data-focusable data-zone="osd">
+          <svg viewBox="0 0 24 24"><path id="icon-volume" d="M4 9v6h4l5 4V5L8 9H4zm12.5 3a4.5 4.5 0 00-2.5-4v8a4.5 4.5 0 002.5-4z"/></svg>
+        </button>
+        <div class="vol"><input id="volume" type="range" min="0" max="1" step="0.05" value="1" aria-label="Volumen"></div>
+        <button id="btn-fav" class="ctl" title="Favorito" data-focusable data-zone="osd">
+          <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.6-7L2 9.2l7.1-.6L12 2l2.9 6.6 7.1.6-5.4 4.8 1.6 7z"/></svg>
+        </button>
+        <button id="btn-fullscreen" class="ctl" title="Pantalla completa" data-focusable data-zone="osd">
+          <svg viewBox="0 0 24 24"><path d="M4 9V4h5v2H6v3H4zm11-5h5v5h-2V6h-3V4zM4 15h2v3h3v2H4v-5zm14 0h2v5h-5v-2h3v-3z"/></svg>
+        </button>
+        <button id="btn-exit" class="ctl ctl--wide" title="Volver" data-focusable data-zone="osd">Volver</button>
+      </div>
+      <div class="osd__hint">
+        <kbd>↑</kbd><kbd>↓</kbd> cambiar canal · <kbd>0-9</kbd> ir al canal · <kbd>Back</kbd> salir
+      </div>
+    </div>
+  </div>
+
+  <div id="zap" class="zap" hidden><span id="zap-digits"></span></div>
+</div>
+
+<div id="toast" class="toast" hidden></div>
+
+<script src="script.js"></script>
+</body>
+</html>

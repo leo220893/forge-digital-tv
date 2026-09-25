@@ -1,7 +1,7 @@
 {
-  "version": 1,
+  "version": 2,
   "brand": "FORGE DIGITAL",
-  "updatedAt": "2026-09-14T12:40:00Z",
+  "updatedAt": "2026-09-25T00:00:00Z",
   "categories": [
     {
       "id": "demo",
@@ -14,6 +14,74 @@
           "logo": "",
           "url": "https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
           "type": "mp4"
+        },
+        {
+          "id": "forge-demo-hls",
+          "name": "FORGE DEMO HLS",
+          "description": "Misma prueba en HLS adaptativo (multi-bitrate) para validar hls.js.",
+          "logo": "",
+          "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+          "type": "hls"
+        }
+      ]
+    },
+    {
+      "id": "cine",
+      "name": "CINE LIBRE",
+      "channels": [
+        {
+          "id": "elephants-dream",
+          "name": "Elephants Dream",
+          "description": "Cortometraje libre del Blender Institute (Creative Commons).",
+          "logo": "https://storage.googleapis.com/gtv-videos-bucket/sample/images/ElephantsDream.jpg",
+          "url": "https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+          "type": "mp4"
+        },
+        {
+          "id": "sintel",
+          "name": "Sintel",
+          "description": "Fantasía animada del Blender Institute, en HLS adaptativo.",
+          "logo": "https://storage.googleapis.com/gtv-videos-bucket/sample/images/Sintel.jpg",
+          "url": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
+          "type": "hls"
+        },
+        {
+          "id": "tears-of-steel",
+          "name": "Tears of Steel",
+          "description": "Ciencia ficción libre con efectos visuales, vía HLS.",
+          "logo": "https://storage.googleapis.com/gtv-videos-bucket/sample/images/TearsOfSteel.jpg",
+          "url": "https://test-streams.mux.dev/test_001/stream.m3u8",
+          "type": "hls"
+        },
+        {
+          "id": "for-bigger-blazes",
+          "name": "For Bigger Blazes",
+          "description": "Clip corto de demostración en MP4.",
+          "logo": "https://storage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerBlazes.jpg",
+          "url": "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+          "type": "mp4"
+        }
+      ]
+    },
+    {
+      "id": "tecnicos",
+      "name": "PRUEBAS TÉCNICAS",
+      "channels": [
+        {
+          "id": "apple-bipbop",
+          "name": "Apple BipBop 4x3",
+          "description": "Stream de referencia de Apple para validar HLS fMP4 y subtítulos.",
+          "logo": "",
+          "url": "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8",
+          "type": "hls"
+        },
+        {
+          "id": "mux-low-latency",
+          "name": "Test Pattern HLS",
+          "description": "Patrón de prueba para medir buffering y cambio de bitrate.",
+          "logo": "",
+          "url": "https://test-streams.mux.dev/pts_shift/master.m3u8",
+          "type": "hls"
         }
       ]
     }
