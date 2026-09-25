@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Forge Digital - Todo tu entretenimiento en un solo lugar. Televisión, deportes, películas, series y contenidos especiales para Smart TV.">
+    <title>Forge Digital | Entretenimiento Digital Premium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <svg viewBox="0 0 80 80">
+                <circle cx="40" cy="40" r="32"></circle>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Cursor Glow Effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="logo.png" alt="Forge Digital Logo" class="logo-img">
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#contenidos" class="nav-link">Contenidos</a>
+                <a href="#beneficios" class="nav-link">Beneficios</a>
+                <a href="#como-funciona" class="nav-link">Cómo funciona</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+            </div>
+            <div class="nav-actions">
+                <a href="https://wa.me/5491125073184?text=Hola%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20Forge%20Digital." class="btn btn-nav">
+                    <span class="btn-text">Solicitar info</span>
+                    <span class="btn-icon">→</span>
+                </a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <a href="#contenidos" class="mobile-link">Contenidos</a>
+            <a href="#beneficios" class="mobile-link">Beneficios</a>
+            <a href="#como-funciona" class="mobile-link">Cómo funciona</a>
+            <a href="#faq" class="mobile-link">FAQ</a>
+            <a href="https://wa.me/5491125073184?text=Hola%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20Forge%20Digital." class="btn btn-primary btn-full">
+                Solicitar información
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+            <div class="grid-pattern"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge animate-on-scroll">
+                <span class="badge-dot"></span>
+                <span>Servicio activo +15.000 usuarios</span>
+            </div>
+            <h1 class="hero-title animate-on-scroll">
+                <span class="title-line">Todo tu</span>
+                <span class="title-line title-gradient">entretenimiento</span>
+                <span class="title-line">en un solo lugar</span>
+            </h1>
+            <p class="hero-subtitle animate-on-scroll">
+                Disfrutá televisión, deportes, películas, series y contenidos especiales
+                desde tu Smart TV con la mejor experiencia.
+            </p>
+            <div class="hero-cta animate-on-scroll">
+                <a href="https://wa.me/5491125073184?text=Hola%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20Forge%20Digital." class="btn btn-primary btn-lg">
+                    <span class="btn-text">Solicitar información</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="#contenidos" class="btn btn-outline btn-lg">
+                    <span class="btn-text">Conocer el servicio</span>
+                </a>
+            </div>
+            <div class="hero-features animate-on-scroll">
+                <div class="hero-feature">
+                    <div class="feature-icon-sm">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2"/>
+                            <path d="M8 21h8M12 17v4"/>
+                        </svg>
+                    </div>
+                    <span>Compatible con Smart TV</span>
+                </div>
+                <div class="hero-feature">
+                    <div class="feature-icon-sm">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <span>Soporte personalizado</span>
+                </div>
+                <div class="hero-feature">
+                    <div class="feature-icon-sm">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <span>Configuración rápida</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual animate-on-scroll">
+            <div class="tv-mockup">
+                <div class="tv-frame">
+                    <div class="tv-screen">
+                        <div class="screen-content">
+                            <div class="screen-header">
+                                <div class="screen-logo">FD</div>
+                                <div class="screen-nav">
+                                    <span class="active">Inicio</span>
+                                    <span>Películas</span>
+                                    <span>Series</span>
+                                    <span>Deportes</span>
+                                    <span>TV en vivo</span>
+                                </div>
+                            </div>
+                            <div class="screen-hero">
+                                <div class="screen-hero-text">
+                                    <span class="screen-badge">Destacado</span>
+                                    <h3>The Last Kingdom</h3>
+                                    <p>Temporada 5 completa</p>
+                                    <div class="screen-actions">
+                                        <button class="screen-btn primary">▶ Reproducir</button>
+                                        <button class="screen-btn">+ Mi lista</button>
+                                    </div>
+                                </div>
+                                <div class="screen-hero-img"></div>
+                            </div>
+                            <div class="screen-categories">
+                                <div class="screen-cat-header">
+                                    <span>Tendencias</span>
+                                    <span class="see-all">Ver todo →</span>
+                                </div>
+                                <div class="screen-cards">
+                                    <div class="screen-card"></div>
+                                    <div class="screen-card"></div>
+                                    <div class="screen-card"></div>
+                                    <div class="screen-card"></div>
+                                    <div class="screen-card"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tv-stand"></div>
+                </div>
+                <div class="tv-glow"></div>
+            </div>
+            <div class="float-card float-card-1">
+                <div class="float-icon">🎬</div>
+                <div class="float-text">
+                    <span class="float-title">+10.000</span>
+                    <span class="float-desc">Películas</span>
+                </div>
+            </div>
+            <div class="float-card float-card-2">
+                <div class="float-icon">⚽</div>
+                <div class="float-text">
+                    <span class="float-title">En vivo</span>
+                    <span class="float-desc">Deportes 24/7</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item animate-on-scroll">
+                    <div class="stat-number" data-count="15000">0</div>
+                    <div class="stat-plus">+</div>
+                    <div class="stat-label">Usuarios activos</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item animate-on-scroll">
+                    <div class="stat-number" data-count="24">0</div>
+                    <div class="stat-plus">hs</div>
+                    <div class="stat-label">Contenido continuo</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item animate-on-scroll">
+                    <div class="stat-number" data-count="98">0</div>
+                    <div class="stat-plus">%</div>
+                    <div class="stat-label">Satisfacción</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Categories -->
+    <section class="section content-section" id="contenidos">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Contenido</span>
+                <h2 class="section-title">Explorá sin límites</h2>
+                <p class="section-desc">Encontrá lo que te gusta en secciones claras, simples y pensadas para disfrutar.</p>
+            </div>
+            <div class="content-grid">
+                <div class="content-card content-card-large animate-on-scroll" data-category="tv">
+                    <div class="content-card-bg"></div>
+                    <div class="content-card-content">
+                        <div class="content-number">01</div>
+                        <div class="content-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="7" width="20" height="15" rx="2"/>
+                                <path d="M17 2l-5 5-5-5"/>
+                            </svg>
+                        </div>
+                        <h3 class="content-title">TV Argentina</h3>
+                        <p class="content-desc">Señales de televisión nacional organizadas y disponibles al instante.</p>
+                        <div class="content-tags">
+                            <span class="tag">Canales en vivo</span>
+                            <span class="tag">HD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-card animate-on-scroll" data-category="deporte">
+                    <div class="content-card-bg"></div>
+                    <div class="content-card-content">
+                        <div class="content-number">02</div>
+                        <div class="content-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 2a14.5 14.5 0 000 20 14.5 14.5 0 000-20M2 12h20"/>
+                            </svg>
+                        </div>
+                        <h3 class="content-title">Deporte Argentina</h3>
+                        <p class="content-desc">Eventos deportivos agrupados para mayor facilidad de acceso.</p>
+                        <div class="content-tags">
+                            <span class="tag">Fútbol</span>
+                            <span class="tag">En vivo</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-card animate-on-scroll" data-category="cine">
+                    <div class="content-card-bg"></div>
+                    <div class="content-card-content">
+                        <div class="content-number">03</div>
+                        <div class="content-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="2" width="20" height="20" rx="2.18"/>
+                                <path d="M7 2v20M17 2v20M2 12h20M2 7h5M2 17h5M17 17h5M17 7h5"/>
+                            </svg>
+                        </div>
+                        <h3 class="content-title">Cine Premium</h3>
+                        <p class="content-desc">Selección cinematográfica presentada de forma simple y elegante.</p>
+                        <div class="content-tags">
+                            <span class="tag">Estrenos</span>
+                            <span class="tag">4K</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-card animate-on-scroll" data-category="series">
+                    <div class="content-card-bg"></div>
+                    <div class="content-card-content">
+                        <div class="content-number">04</div>
+                        <div class="content-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <polygon points="5 3 19 12 5 21 5 3"/>
+                            </svg>
+                        </div>
+                        <h3 class="content-title">Series y Películas</h3>
+                        <p class="content-desc">Historias para todos los gustos en categorías claras y accesibles.</p>
+                        <div class="content-tags">
+                            <span class="tag">Series</span>
+                            <span class="tag">Películas</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-card animate-on-scroll" data-category="gaming">
+                    <div class="content-card-bg"></div>
+                    <div class="content-card-content">
+                        <div class="content-number">05</div>
+                        <div class="content-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <line x1="6" y1="12" x2="10" y2="12"/>
+                                <line x1="8" y1="10" x2="8" y2="14"/>
+                                <line x1="15" y1="13" x2="15.01" y2="13"/>
+                                <line x1="18" y1="11" x2="18.01" y2="11"/>
+                                <path d="M17.32 5H6.68a4 4 0 00-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 003 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 019.828 16h4.344a2 2 0 011.414.586L17 18c.5.5 1 1 2 1a3 3 0 003-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0017.32 5z"/>
+                            </svg>
+                        </div>
+                        <h3 class="content-title">Gaming & Deportes</h3>
+                        <p class="content-desc">Contenido de esports y eventos deportivos en vivo.</p>
+                        <div class="content-tags">
+                            <span class="tag">Esports</span>
+                            <span class="tag">Torneos</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-card animate-on-scroll" data-category="especial">
+                    <div class="content-card-bg"></div>
+                    <div class="content-card-content">
+                        <div class="content-number">06</div>
+                        <div class="content-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <h3 class="content-title">Contenido 24hs</h3>
+                        <p class="content-desc">Propuestas especiales disponibles de forma continua.</p>
+                        <div class="content-tags">
+                            <span class="tag">24 horas</span>
+                            <span class="tag">Continuo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="content-disclaimer animate-on-scroll">La disponibilidad y organización de los contenidos puede variar.</p>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section benefits-section" id="beneficios">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Beneficios</span>
+                <h2 class="section-title">Una experiencia simple y completa</h2>
+                <p class="section-desc">Todo lo necesario para disfrutar de manera cómoda, ordenada y acompañada.</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0022 16z"/>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Todo en una aplicación</h3>
+                    <p class="benefit-desc">Tus categorías favoritas presentadas en un entorno ordenado.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Rápida y fácil</h3>
+                    <p class="benefit-desc">Navegación pensada para llegar al contenido sin complicaciones.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 010 7.75"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Para toda la familia</h3>
+                    <p class="benefit-desc">Opciones variadas para acompañar distintos momentos y preferencias.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 2a14.5 14.5 0 000 20 14.5 14.5 0 000-20M2 12h20"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Secciones deportivas</h3>
+                    <p class="benefit-desc">Categorías especiales para seguir la actualidad deportiva.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polyline points="23 4 23 10 17 10"/>
+                            <path d="M20.49 15a9 9 0 11-2.12-9.36L23 10"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Actualizaciones</h3>
+                    <p class="benefit-desc">La organización del servicio se revisa y mejora de manera regular.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Atención personalizada</h3>
+                    <p class="benefit-desc">Acompañamiento para resolver consultas sobre el uso del servicio.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Instalación guiada</h3>
+                    <p class="benefit-desc">Recibís instrucciones claras para completar la configuración.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2"/>
+                            <path d="M8 21h8M12 17v4"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Dispositivos compatibles</h3>
+                    <p class="benefit-desc">Verificamos previamente si tu equipo admite el servicio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section class="section how-section" id="como-funciona">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Proceso</span>
+                <h2 class="section-title">¿Cómo funciona?</h2>
+                <p class="section-desc">Te acompañamos desde la primera consulta hasta la configuración de tu dispositivo.</p>
+            </div>
+            <div class="steps-container">
+                <div class="steps-line"></div>
+                <div class="steps-grid">
+                    <div class="step-card animate-on-scroll">
+                        <div class="step-number">01</div>
+                        <div class="step-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="step-title">Solicitás información</h3>
+                        <p class="step-desc">Nos escribís por WhatsApp y te contamos todos los detalles del servicio.</p>
+                    </div>
+                    <div class="step-card animate-on-scroll">
+                        <div class="step-number">02</div>
+                        <div class="step-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <polyline points="9 11 12 14 22 4"/>
+                                <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+                            </svg>
+                        </div>
+                        <h3 class="step-title">Verificamos tu equipo</h3>
+                        <p class="step-desc">Revisamos la compatibilidad de tu dispositivo antes de avanzar.</p>
+                    </div>
+                    <div class="step-card animate-on-scroll">
+                        <div class="step-number">03</div>
+                        <div class="step-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <polyline points="10 9 9 9 8 9"/>
+                            </svg>
+                        </div>
+                        <h3 class="step-title">Recibís las instrucciones</h3>
+                        <p class="step-desc">Te guiamos paso a paso durante el proceso de instalación.</p>
+                    </div>
+                    <div class="step-card animate-on-scroll">
+                        <div class="step-number">04</div>
+                        <div class="step-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <polygon points="5 3 19 12 5 21 5 3"/>
+                            </svg>
+                        </div>
+                        <h3 class="step-title">Empezás a disfrutar</h3>
+                        <p class="step-desc">Accedés a toda la experiencia de Forge Digital.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="steps-cta animate-on-scroll">
+                <a href="https://wa.me/5491125073184?text=Hola%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20Forge%20Digital." class="btn btn-primary btn-lg">
+                    <span class="btn-text">Quiero comenzar</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Devices Section -->
+    <section class="section devices-section">
+        <div class="container">
+            <div class="devices-content">
+                <div class="devices-info animate-on-scroll">
+                    <span class="section-tag">Dispositivos</span>
+                    <h2 class="section-title">Dispositivos compatibles</h2>
+                    <p class="section-desc">Forge Digital puede utilizarse en distintos equipos compatibles. Antes de avanzar, verificamos juntos las características de tu dispositivo.</p>
+                    <div class="devices-badges">
+                        <span class="device-badge">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 11 12 14 22 4"/>
+                                <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+                            </svg>
+                            Verificación previa
+                        </span>
+                        <span class="device-badge">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 11 12 14 22 4"/>
+                                <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+                            </svg>
+                            Instalación acompañada
+                        </span>
+                    </div>
+                    <a href="https://wa.me/5491125073184?text=Hola%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20Forge%20Digital." class="btn btn-primary">
+                        <span class="btn-text">Consultar compatibilidad</span>
+                    </a>
+                </div>
+                <div class="devices-grid animate-on-scroll">
+                    <div class="device-card">
+                        <div class="device-icon-wrapper">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                                <path d="M8 21h8M12 17v4"/>
+                            </svg>
+                        </div>
+                        <span class="device-name">Smart TV</span>
+                    </div>
+                    <div class="device-card">
+                        <div class="device-icon-wrapper">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                                <path d="M8 21h8M12 17v4"/>
+                                <path d="M7 8h.01M12 8h.01M17 8h.01"/>
+                            </svg>
+                        </div>
+                        <span class="device-name">TV Box</span>
+                    </div>
+                    <div class="device-card">
+                        <div class="device-icon-wrapper">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="5" y="2" width="14" height="20" rx="2"/>
+                                <line x1="12" y1="18" x2="12.01" y2="18"/>
+                            </svg>
+                        </div>
+                        <span class="device-name">Android</span>
+                    </div>
+                    <div class="device-card">
+                        <div class="device-icon-wrapper">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"/>
+                                <path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"/>
+                                <path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"/>
+                                <path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"/>
+                                <path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/>
+                            </svg>
+                        </div>
+                        <span class="device-name">Control remoto</span>
+                    </div>
+                </div>
+            </div>
+            <p class="devices-disclaimer animate-on-scroll">La compatibilidad puede variar según el modelo y el sistema operativo del dispositivo. Consultanos antes de contratar.</p>
+        </div>
+    </section>
+
+    <!-- Referral Section -->
+    <section class="section referral-section">
+        <div class="container">
+            <div class="referral-card animate-on-scroll">
+                <div class="referral-bg">
+                    <div class="referral-orb orb-ref-1"></div>
+                    <div class="referral-orb orb-ref-2"></div>
+                </div>
+                <div class="referral-content">
+                    <div class="referral-badge">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+                        </svg>
+                        Beneficio exclusivo
+                    </div>
+                    <h2 class="referral-title">Recomendá Forge Digital y obtené un mes bonificado</h2>
+                    <p class="referral-desc">Cuando una persona recomendada contrata el servicio por un período mínimo de un mes, recibís una bonificación del 100% en tu siguiente mensualidad.</p>
+                    <ul class="referral-list">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            Se aplica durante el mes siguiente
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            Puede utilizarse una vez por mes
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            Válido para clientes con servicio activo
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/5491125073184?text=Hola%2C%20soy%20cliente%20de%20Forge%20Digital%20y%20quiero%20recomendar%20el%20servicio." class="btn btn-white">
+                        <span class="btn-text">Quiero recomendar</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Testimonios</span>
+                <h2 class="section-title">Personas reales, resultados reales</h2>
+                <p class="section-desc">Más de 15.000 usuarios ya disfrutan de Forge Digital</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-stars">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <blockquote class="testimonial-text">"Tengo todo en un solo lugar. Mis hijos ven dibujos y yo series. La calidad es excelente."</blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">LM</div>
+                        <div class="author-info">
+                            <span class="author-name">Laura M.</span>
+                            <span class="author-role">Madre de familia</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-stars">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <blockquote class="testimonial-text">"Los partidos de fútbol se ven perfectos. No me pierdo ni un gol desde que lo tengo."</blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">CR</div>
+                        <div class="author-info">
+                            <span class="author-name">Carlos R.</span>
+                            <span class="author-role">Deportista</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-stars">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <blockquote class="testimonial-text">"Muy fácil de usar. En 5 minutos ya estaba viendo todo. Recomendadísimo."</blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AP</div>
+                        <div class="author-info">
+                            <span class="author-name">Ana P.</span>
+                            <span class="author-role">Estudiante</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section" id="faq">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Preguntas frecuentes</h2>
+                <p class="section-desc">Respuestas breves a las consultas más comunes sobre Forge Digital.</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>¿Qué es Forge Digital?</span>
+                        <div class="faq-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Es un servicio de entretenimiento digital que organiza distintas categorías de contenido en una interfaz simple para dispositivos compatibles.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>¿En qué dispositivos funciona?</span>
+                        <div class="faq-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Puede utilizarse en determinados Smart TV, TV Box y dispositivos Android. La compatibilidad depende del modelo y del sistema operativo; consultanos antes de contratar.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>¿Cómo se realiza la instalación?</span>
+                        <div class="faq-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Luego de verificar la compatibilidad, te enviamos instrucciones y te acompañamos durante la instalación.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>¿Necesito conexión a internet?</span>
+                        <div class="faq-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí. El servicio requiere una conexión a internet. El desempeño puede variar según la conexión, la red y el dispositivo utilizado.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>¿Cómo solicito soporte?</span>
+                        <div class="faq-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Podés escribirnos por WhatsApp. La atención es personalizada y te ayudaremos a revisar tu consulta.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>¿Cómo funciona el beneficio por recomendación?</span>
+                        <div class="faq-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Si una persona recomendada contrata por al menos un mes, recibís una bonificación del 100% en la mensualidad siguiente. Se aplica una vez por mes y requiere que tu servicio esté activo.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>¿Puedo consultar la compatibilidad antes de contratar?</span>
+                        <div class="faq-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí. De hecho, recomendamos verificar el modelo y sistema operativo de tu dispositivo antes de avanzar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-card animate-on-scroll">
+                <div class="cta-bg">
+                    <div class="cta-orb cta-orb-1"></div>
+                    <div class="cta-orb cta-orb-2"></div>
+                </div>
+                <div class="cta-content">
+                    <h2 class="cta-title">¿Querés conocer Forge Digital?</h2>
+                    <p class="cta-desc">Escribinos y te explicamos cómo funciona, verificamos la compatibilidad de tu dispositivo y respondemos tus consultas.</p>
+                    <div class="cta-buttons">
+                        <a href="https://wa.me/5491125073184?text=Hola%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20Forge%20Digital." class="btn btn-white btn-lg">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                            <span class="btn-text">Hablar por WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img src="logo.png" alt="Forge Digital Logo" class="logo-img">
+                    </a>
+                    <p class="footer-tagline">Todo tu entretenimiento en un solo lugar.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#contenidos">Contenidos</a>
+                    <a href="#beneficios">Beneficios</a>
+                    <a href="#como-funciona">Cómo funciona</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+                <div class="footer-cta">
+                    <a href="https://wa.me/5491125073184?text=Hola%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20Forge%20Digital." class="btn btn-outline btn-sm">
+                        <span class="btn-text">Contactanos</span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Forge Digital. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5491125073184?text=Hola%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20Forge%20Digital." class="whatsapp-float" aria-label="Contactar por WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        <span class="whatsapp-tooltip">¿Necesitás ayuda?</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
